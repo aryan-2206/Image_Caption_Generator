@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.pth
+/data/train2017/
+/data/val2017/
+/checkpoints/
+results/
