@@ -49,7 +49,7 @@ image-captioning/
 ├── checkpoints/         # Saved model weights
 └── outputs/             # Generated captions, plots, evaluation reports
 
----
+```
 
 ## Installation
 
