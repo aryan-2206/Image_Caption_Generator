@@ -1,0 +1,52 @@
+MS COCO 2017 Dataset Structure
+
+The Microsoft COCO (Common Objects in Context) dataset is widely used for image captioning, object detection, segmentation, and other computer vision tasks.
+
+Folder Structure (Typical):
+
+data/
+├── train2017/          # Training images (approx. 118k)
+│   ├── 000000000001.jpg
+│   ├── 000000000002.jpg
+│   └── ...
+├── val2017/            # Validation images (approx. 5k)
+│   ├── 000000000001.jpg
+│   └── ...
+├── annotations/        # JSON annotation files
+│   ├── captions_train2017.json   # Captions for training images
+│   ├── captions_val2017.json     # Captions for validation images
+│   ├── instances_train2017.json  # Object detection annotations
+│   ├── instances_val2017.json
+│   └── person_keypoints_train2017.json  # Optional keypoints
+└── sample.jpg          # Any custom test image (optional)
+
+JSON Annotations Overview:
+
+1. captions_train2017.json / captions_val2017.json
+   - images: metadata for each image (id, file_name, width, height, URLs)
+   - annotations: captions corresponding to image IDs
+   Example:
+     {
+       "images": [
+         {"id": 1, "file_name": "000000000001.jpg", "width": 640, "height": 480},
+         ...
+       ],
+       "annotations": [
+         {"image_id": 1, "caption": "A man riding a horse."},
+         ...
+       ]
+     }
+
+2. instances_train2017.json / instances_val2017.json
+   - Contains object detection data: category_id, segmentation, bounding boxes, etc.
+
+Notes:
+- Each image can have multiple captions (typically 5 per image).
+- The dataset is large; for experimentation, subsets of images are often used.
+- The folder names and annotation files must match exactly with references in your code.
+
+Purpose:
+- train2017/ and val2017/ images: used for model training and validation.
+- annotations/: used to map images to captions or other labels.
+- sample.jpg: allows testing inference on custom images without needing full dataset.
+
