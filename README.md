@@ -33,7 +33,7 @@ The project supports **quantitative evaluation** using BLEU scores and **qualita
 The following plot illustrated the reduction in Cross-Entropy Loss over the training epochs. The convergence of the validation loss indicates the model's ability to generalize to unseen images.
 
 <p align="center">
-  <img src="images/loss_curve.png" width="600" alt="Training Loss Curve">
+  <img src="images/new_loss_curve.png" width="600" alt="Training Loss Curve">
 </p>
 
 ### 🖼️ Model Predictions
